@@ -138,8 +138,8 @@ export default function FlutterPortfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse will-change-transform hidden sm:block"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse will-change-transform hidden sm:block"></div>
       </div>
 
       <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-lg z-50 border-b border-purple-500/20 shadow-lg">
@@ -179,6 +179,8 @@ export default function FlutterPortfolio() {
                 src="/images/profile.jpg"
                 alt="Yousef Gamal"
                 className="w-full h-full rounded-full object-cover border-4 border-slate-900"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -262,11 +264,11 @@ export default function FlutterPortfolio() {
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 sm:mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Featured Projects</h3>
           <div className="space-y-16">
             {projects.map((project, index) => (
-              <div key={index} className="bg-slate-800/80 backdrop-blur rounded-3xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500/60 transition shadow-2xl">
+              <div key={index} className="bg-slate-800/80 backdrop-blur rounded-3xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500/60 transition shadow-2xl" style={{ contain: 'layout style' }}>
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
                     <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                      <img src={project.icon} alt={project.title} className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-lg flex-shrink-0" />
+                      <img src={project.icon} alt={project.title} className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-lg flex-shrink-0" loading="lazy" decoding="async" />
                       <div>
                         <h4 className="text-2xl sm:text-3xl font-bold mb-1">{project.title}</h4>
                         <p className="text-purple-400 text-base sm:text-lg">{project.subtitle}</p>
@@ -334,16 +336,18 @@ export default function FlutterPortfolio() {
 
                   <div className="p-4 sm:p-8 lg:p-12 flex items-center justify-center bg-purple-900/20 order-1 lg:order-2">
                     <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
-                      <div className="relative w-full max-w-[240px] sm:max-w-[280px] lg:w-80 mx-auto aspect-[9/19] lg:h-[640px] bg-slate-900 rounded-[2rem] sm:rounded-[3rem] border-4 sm:border-8 border-slate-800 shadow-2xl overflow-hidden">
+                      <div className="relative w-full max-w-[240px] sm:max-w-[280px] lg:w-80 mx-auto aspect-[9/19] lg:h-[640px] bg-slate-900 rounded-[2rem] sm:rounded-[3rem] border-4 sm:border-8 border-slate-800 shadow-2xl overflow-hidden will-change-transform">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 lg:w-40 h-4 sm:h-5 lg:h-7 bg-slate-900 rounded-b-xl sm:rounded-b-2xl lg:rounded-b-3xl z-10"></div>
                         <div className="w-full h-full overflow-hidden">
-                          <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${getCurrentScreenshot(index) * 100}%)` }}>
+                          <div className="flex transition-transform duration-300 sm:duration-500 will-change-transform" style={{ transform: `translateX(-${getCurrentScreenshot(index) * 100}%)` }}>
                             {project.screenshots.map((screenshot, i) => (
                               <img
                                 key={i}
                                 src={screenshot}
                                 alt={project.title}
                                 className="w-full h-full object-cover flex-shrink-0"
+                                loading="lazy"
+                                decoding="async"
                               />
                             ))}
                           </div>
