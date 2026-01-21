@@ -45,8 +45,7 @@ vercel --prod
    git add .
    git commit -m "Update portfolio"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/flutter-portfolio.git
-   git push -u origin main
+   git remote add origin https://github.com/yousef123123123/flutter-portfolio.git
    ```
 
 3. **ربط Vercel:**
@@ -61,6 +60,7 @@ vercel --prod
 
 ## ملاحظات مهمة ✅
 
-- تأكد أن جميع التعديلات محفوظة
+- تأكد أن جميع التعديلات مح
+   git push -u origin mainفوظة
 - تأكد أن المشروع يعمل محلياً (`npm run dev`)
 - ملف `vercel.json` موجود وجاهز

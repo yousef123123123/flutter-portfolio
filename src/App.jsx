@@ -148,7 +148,6 @@ export default function FlutterPortfolio() {
             <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
               Yousef Gamal
             </h1>
-
             <div className="hidden md:flex gap-8">
               <button onClick={() => scrollToSection('about')} className="hover:text-purple-400 transition">About</button>
               <button onClick={() => scrollToSection('projects')} className="hover:text-purple-400 transition">Projects</button>
@@ -182,8 +181,7 @@ export default function FlutterPortfolio() {
                 className="w-full h-full rounded-full object-cover border-4 border-slate-900"
               />
             </div>
-          </div>
-
+            </div>
           <h2 className="text-6xl sm:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
             Flutter Developer
           </h2>
@@ -193,7 +191,6 @@ export default function FlutterPortfolio() {
           <p className="text-lg text-purple-300 mb-10 max-w-2xl mx-auto">
             with clean and maintainable architecture
           </p>
-
           <div className="flex gap-4 justify-center flex-wrap mb-8">
             <a href="#contact" className="px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:from-purple-700 hover:to-pink-700 transition flex items-center gap-3 text-lg font-semibold shadow-lg">
               <Mail size={22} />
@@ -263,7 +260,6 @@ export default function FlutterPortfolio() {
       <section id="projects" className="relative py-24 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Featured Projects</h3>
-
           <div className="space-y-16">
             {projects.map((project, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur rounded-3xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500/60 transition shadow-2xl">
@@ -338,7 +334,6 @@ export default function FlutterPortfolio() {
                     <div className="relative">
                       <div className="relative w-80 h-[640px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-slate-900 rounded-b-3xl z-10"></div>
-
                         <div className="w-full h-full overflow-hidden">
                           <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${getCurrentScreenshot(index) * 100}%)` }}>
                             {project.screenshots.map((screenshot, i) => (
