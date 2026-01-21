@@ -4,6 +4,11 @@ import { Github, Linkedin, Mail, ExternalLink, Code, Smartphone, Download, Menu,
 export default function FlutterPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeScreenshot, setActiveScreenshot] = useState({});
+  const [loadedImages, setLoadedImages] = useState(new Set());
+
+  const handleImageLoad = (src) => {
+    setLoadedImages(prev => new Set([...prev, src]));
+  };
 
   const projects = [
     {
@@ -136,7 +141,7 @@ export default function FlutterPortfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse will-change-transform hidden sm:block"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse will-change-transform hidden sm:block"></div>
@@ -171,16 +176,17 @@ export default function FlutterPortfolio() {
         </div>
       </nav>
 
-      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="mb-6 sm:mb-8">
             <div className="w-40 h-40 sm:w-52 sm:h-52 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 p-1.5 shadow-2xl">
               <img
                 src="/images/profile.jpg"
                 alt="Yousef Gamal"
-                className="w-full h-full rounded-full object-cover border-4 border-slate-900"
+                className="w-full h-full rounded-full object-cover border-4 border-slate-900 bg-slate-800"
                 loading="eager"
                 decoding="async"
+                onLoad={() => handleImageLoad('/images/profile.jpg')}
               />
             </div>
           </div>
@@ -259,7 +265,7 @@ export default function FlutterPortfolio() {
         </div>
       </section>
 
-      <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6">
+      <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 sm:mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Featured Projects</h3>
           <div className="space-y-16">
@@ -268,7 +274,7 @@ export default function FlutterPortfolio() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
                     <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                      <img src={project.icon} alt={project.title} className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-lg flex-shrink-0" loading="lazy" decoding="async" />
+                      <img src={project.icon} alt={project.title} className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-lg flex-shrink-0 bg-slate-800" loading="lazy" decoding="async" onLoad={() => handleImageLoad(project.icon)} />
                       <div>
                         <h4 className="text-2xl sm:text-3xl font-bold mb-1">{project.title}</h4>
                         <p className="text-purple-400 text-base sm:text-lg">{project.subtitle}</p>
@@ -345,9 +351,10 @@ export default function FlutterPortfolio() {
                                 key={i}
                                 src={screenshot}
                                 alt={project.title}
-                                className="w-full h-full object-cover flex-shrink-0"
-                                loading="lazy"
+                                className="w-full h-full object-cover flex-shrink-0 bg-slate-800"
+                                loading={i === 0 ? "eager" : "lazy"}
                                 decoding="async"
+                                onLoad={() => handleImageLoad(screenshot)}
                               />
                             ))}
                           </div>
@@ -396,7 +403,7 @@ export default function FlutterPortfolio() {
         </div>
       </section>
 
-      <section id="contact" className="relative py-16 sm:py-24 px-4 sm:px-6">
+      <section id="contact" className="relative py-16 sm:py-24 px-4 sm:px-6 bg-transparent">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Let's Work Together</h3>
           <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 px-4">

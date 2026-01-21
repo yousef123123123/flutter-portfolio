@@ -28,22 +28,37 @@ img {
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background-color: #0f172a; /* slate-900 */
+  height: 100%;
 }
 
 /* Optimize rendering */
 body {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  background-color: #0f172a; /* slate-900 */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Prevent white flash on fast scroll */
+#root {
+  background-color: #0f172a; /* slate-900 */
+  min-height: 100vh;
 }
 
 /* Improve scroll performance */
 section {
   contain: layout style paint;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
 }
 
-/* Optimize images */
+/* Optimize images - prevent white flash */
 img {
-  content-visibility: auto;
+  background-color: #1e293b; /* slate-800 */
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* Reduce repaints on scroll */
