@@ -74,7 +74,7 @@ export default function FlutterPortfolio() {
       screenshots: [
         "/images/derma-screenshot.webp"
       ],
-      icon: "/images/icon_derma.png",
+      icon: "/images/remain_logo_launch_icon.png",
       playstore: "https://play.google.com/store/apps/details?id=com.quick.derma",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "500+", rating: "4.5", reviews: "Excellent" },
@@ -86,9 +86,9 @@ export default function FlutterPortfolio() {
       description: "A comprehensive educational platform for online courses in Kuwait. Browse courses, track progress, and learn at your own pace.",
       tech: ["Flutter", "Firebase", "Video Player", "Bloc"],
       screenshots: [
-        "/images/inclass-screenshot.webp"
+        "/images/inclasskw-screen.webp"
       ],
-      icon: "https://via.placeholder.com/240x240/4A90D9/FFFFFF?text=IC",
+      icon: "/images/inclass-logo.png",
       appstore: "https://apps.apple.com/ca/app/inclass-kw/id6756549666",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "iOS", rating: "New", reviews: "Growing" },
