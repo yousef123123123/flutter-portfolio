@@ -72,9 +72,9 @@ export default function FlutterPortfolio() {
       description: "Book dermatologists and skin treatment sessions easily. A comprehensive medical app for a chain of cosmetic and dermatology clinics in Saudi Arabia.",
       tech: ["Flutter", "Firebase", "REST API", "Bloc"],
       screenshots: [
-        "/images/remain-derma-screenshot.png"
+        "/images/derma-screenshot.webp"
       ],
-      icon: "https://play-lh.googleusercontent.com/03r6vk1QQ6QXguZj3Yu2ceW1SWbex04MYwdP41YyPjuuMY2bHwH7B74OHLRypQhiOoI=w240-h480",
+      icon: "/images/icon_derma.png",
       playstore: "https://play.google.com/store/apps/details?id=com.quick.derma",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "500+", rating: "4.5", reviews: "Excellent" },
