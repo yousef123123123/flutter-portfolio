@@ -115,6 +115,36 @@ export default function FlutterPortfolio() {
     }
   ];
 
+  const packages = [
+    {
+      title: "arabic_name_transliterator",
+      description: "Comprehensive Flutter package for bidirectional transliteration of Arabic names between Arabic (Saudi, Egyptian, etc.) and English. Features a large database of common names with intelligent handling of unknown names.",
+      tech: ["Flutter", "Dart", "Localization", "NLP"],
+      pubdev: "https://pub.dev/packages/arabic_name_transliterator",
+      github: "https://github.com/yousef123123123",
+      stats: { likes: "150", points: "90", downloads: "3+" },
+      features: ["Arabic ↔ English Transliteration", "Large Name Database", "Auto Transliteration", "Multi-dialect Support", "High Accuracy"]
+    },
+    {
+      title: "flutter_ocr_identity_extractor",
+      description: "Advanced Flutter package for OCR operations and ID card data extraction. Extracts text from images and parses identity information from Saudi ID cards using Google ML Kit with comprehensive data validation.",
+      tech: ["Flutter", "ML Kit", "OCR", "Document Scanning"],
+      pubdev: "https://pub.dev/packages/flutter_ocr_identity_extractor",
+      github: "https://github.com/yousef123123123",
+      stats: { likes: "120", points: "25", downloads: "1+" },
+      features: ["Text Recognition", "ID Card Parsing", "Data Extraction", "Error Handling", "Image Processing"]
+    },
+    {
+      title: "ui_skeleton_factory",
+      description: "Zero-config Flutter package for automatically generating skeleton loading UI from any Widget. Provides custom registry, caching, debug mode, animated transitions, and powerful controller with pure Flutter, no external dependencies.",
+      tech: ["Flutter", "Dart", "UI/UX", "Performance"],
+      pubdev: "https://pub.dev/packages/ui_skeleton_factory",
+      github: "https://github.com/yousef123123123",
+      stats: { likes: "140", points: "96", downloads: "2+" },
+      features: ["Auto Skeleton Generation", "Custom Registry", "Caching", "Animations", "Zero Config", "No Dependencies"]
+    }
+  ];
+
   const skills = [
     {
       category: "Mobile Development",
