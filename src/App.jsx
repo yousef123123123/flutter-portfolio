@@ -79,11 +79,25 @@ export default function FlutterPortfolio() {
       screenshots: [
         "/images/derma-screenshot.webp"
       ],
-      icon: "/images/remain_logo_launch_icon.png",
+      icon: "/images/icon_derma.png",
       playstore: "https://play.google.com/store/apps/details?id=com.quick.derma",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "500+", rating: "4.5", reviews: "Excellent" },
       features: ["Dermatologist Booking", "Skin Treatment Sessions", "Medical Records", "Real-time Notifications", "Secure Payments"]
+    },
+    {
+      title: "Remain",
+      subtitle: "Home Care Services",
+      description: "Professional home care services at your doorstep. Book home visits, X-rays, nursing care, and medical consultations easily. Comprehensive healthcare solutions delivered to your home.",
+      tech: ["Flutter", "Firebase", "REST API", "Bloc"],
+      screenshots: [
+        "/images/remain-homecare-screenshot.png"
+      ],
+      icon: "/images/remain_logo_launch_icon.png",
+      playstore: "https://play.google.com/store/apps/details?id=com.remain.homecare",
+      github: "https://github.com/yousef123123123",
+      stats: { downloads: "1000+", rating: "4.8", reviews: "Excellent" },
+      features: ["Home Visit Services", "Home X-rays & Imaging", "Nursing Care", "Lab Tests", "Medical Consultations", "Real-time Booking", "Professional Healthcare Staff"]
     },
     {
       title: "InClass KW",
