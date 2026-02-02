@@ -152,15 +152,15 @@ export default function FlutterPortfolio() {
     },
     {
       category: "State Management",
-      items: ["Provider", "Bloc", "Riverpod", "GetX", "Redux", "MobX"]
+      items: ["Provider", "Bloc", "Riverpod", "GetX"]
     },
     {
       category: "Backend & APIs",
-      items: ["Firebase", "REST APIs", "GraphQL", "Node.js", "MongoDB", "SQL"]
+      items: ["Firebase", "GraphQL", "Node.js", "SQL"]
     },
     {
       category: "Tools & Deployment",
-      items: ["Git", "CI/CD", "Figma", "App Store", "Play Store", "Fastlane"]
+      items: ["Git", "CI/CD", "Figma", "App Store", "Play Store"]
     }
   ];
 
@@ -200,6 +200,7 @@ export default function FlutterPortfolio() {
             <div className="hidden md:flex gap-8">
               <button onClick={() => scrollToSection('about')} className="hover:text-purple-400 transition">About</button>
               <button onClick={() => scrollToSection('projects')} className="hover:text-purple-400 transition">Projects</button>
+              <button onClick={() => scrollToSection('packages')} className="hover:text-purple-400 transition">Packages</button>
               <button onClick={() => scrollToSection('skills')} className="hover:text-purple-400 transition">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="hover:text-purple-400 transition">Contact</button>
             </div>
@@ -213,6 +214,7 @@ export default function FlutterPortfolio() {
             <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
               <button onClick={() => scrollToSection('about')} className="text-left hover:text-purple-400">About</button>
               <button onClick={() => scrollToSection('projects')} className="text-left hover:text-purple-400">Projects</button>
+              <button onClick={() => scrollToSection('packages')} className="text-left hover:text-purple-400">Packages</button>
               <button onClick={() => scrollToSection('skills')} className="text-left hover:text-purple-400">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="text-left hover:text-purple-400">Contact</button>
             </div>
@@ -416,6 +418,67 @@ export default function FlutterPortfolio() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" className="relative py-16 sm:py-24 px-4 sm:px-6 bg-transparent">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 sm:mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Open Source Packages</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {packages.map((pkg, index) => (
+              <div key={index} className="bg-slate-800/80 backdrop-blur rounded-2xl overflow-hidden border-2 border-purple-500/30 hover:border-purple-500/60 transition shadow-xl hover:shadow-2xl p-6 sm:p-8 flex flex-col h-full">
+                <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-purple-400">{pkg.title}</h4>
+                <p className="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed flex-grow">{pkg.description}</p>
+
+                <div className="mb-4 sm:mb-6">
+                  <h5 className="text-sm sm:text-base font-semibold mb-2 text-purple-300">Key Features:</h5>
+                  <ul className="space-y-1.5">
+                    {pkg.features.slice(0, 4).map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-gray-300 text-xs sm:text-sm">
+                        <span className="w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+                  {pkg.tech.map((tech, i) => (
+                    <span key={i} className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-purple-600/20 rounded-full text-xs border border-purple-500/30">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
+                  <div className="text-center p-2 sm:p-3 bg-slate-800/50 rounded-lg border border-purple-500/20">
+                    <div className="text-sm sm:text-lg font-bold text-purple-400">{pkg.stats.likes}</div>
+                    <div className="text-xs text-gray-400">Likes</div>
+                  </div>
+                  <div className="text-center p-2 sm:p-3 bg-slate-800/50 rounded-lg border border-purple-500/20">
+                    <div className="text-sm sm:text-lg font-bold text-pink-400">{pkg.stats.points}</div>
+                    <div className="text-xs text-gray-400">Points</div>
+                  </div>
+                  <div className="text-center p-2 sm:p-3 bg-slate-800/50 rounded-lg border border-purple-500/20">
+                    <div className="text-sm sm:text-lg font-bold text-yellow-400">{pkg.stats.downloads}</div>
+                    <div className="text-xs text-gray-400">Downloads</div>
+                  </div>
+                </div>
+
+                <div className="flex gap-2 sm:gap-3 flex-wrap">
+                  <a href={pkg.pubdev} target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[120px] px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg hover:from-purple-700 hover:to-pink-700 transition flex items-center justify-center gap-1.5 text-xs sm:text-sm font-semibold shadow-lg">
+                    <ExternalLink size={16} className="sm:w-4 sm:h-4" />
+                    <span className="hidden sm:inline">Pub.dev</span>
+                    <span className="sm:hidden">Pub</span>
+                  </a>
+                  <a href={pkg.github} target="_blank" rel="noopener noreferrer" className="px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-800 rounded-lg hover:bg-slate-700 transition flex items-center gap-1.5 text-xs sm:text-sm font-semibold border-2 border-purple-500/30">
+                    <Github size={16} className="sm:w-4 sm:h-4" />
+                    <span className="hidden sm:inline">GitHub</span>
+                  </a>
                 </div>
               </div>
             ))}
