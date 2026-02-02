@@ -91,7 +91,7 @@ export default function FlutterPortfolio() {
       description: "Professional home care services at your doorstep. Book home visits, X-rays, nursing care, and medical consultations easily. Comprehensive healthcare solutions delivered to your home.",
       tech: ["Flutter", "Firebase", "REST API", "Bloc"],
       screenshots: [
-        "/images/remain-homecare-screenshot.png"
+        "/images/remain-derma-screenshot.png"
       ],
       icon: "/images/remain_logo_launch_icon.png",
       playstore: "https://play.google.com/store/apps/details?id=com.remain.homecare",
