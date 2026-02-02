@@ -49,9 +49,9 @@ export default function FlutterPortfolio() {
       description: "Professional inventory management for businesses. Track stock, manage orders, and monitor inventory in real-time.",
       tech: ["Flutter", "REST API", "Charts", "Provider"],
       screenshots: [
-        "/images/remain-screenshot.webp"
+        "/images/remain-homecare-screenshot.png"
       ],
-      icon: "https://via.placeholder.com/240x240/3498db/FFFFFF?text=R",
+      icon: "/images/remain_logo_launch_icon.png",
       appstore: "https://apps.apple.com/sa/app/remain/id6670443386",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "iOS", rating: "New", reviews: "Growing" },
