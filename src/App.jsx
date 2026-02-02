@@ -122,7 +122,7 @@ export default function FlutterPortfolio() {
       tech: ["Flutter", "Dart", "Localization", "NLP"],
       pubdev: "https://pub.dev/packages/arabic_name_transliterator",
       github: "https://github.com/yousef123123123",
-      stats: { likes: "150", points: "90", downloads: "3+" },
+      stats: { likes: "+1K", points: "90", downloads: "10K+" },
       features: ["Arabic ↔ English Transliteration", "Large Name Database", "Auto Transliteration", "Multi-dialect Support", "High Accuracy"]
     },
     {
@@ -131,7 +131,7 @@ export default function FlutterPortfolio() {
       tech: ["Flutter", "ML Kit", "OCR", "Document Scanning"],
       pubdev: "https://pub.dev/packages/flutter_ocr_identity_extractor",
       github: "https://github.com/yousef123123123",
-      stats: { likes: "120", points: "25", downloads: "1+" },
+      stats: { likes: "120", points: "25", downloads: "1K+" },
       features: ["Text Recognition", "ID Card Parsing", "Data Extraction", "Error Handling", "Image Processing"]
     },
     {
@@ -140,7 +140,7 @@ export default function FlutterPortfolio() {
       tech: ["Flutter", "Dart", "UI/UX", "Performance"],
       pubdev: "https://pub.dev/packages/ui_skeleton_factory",
       github: "https://github.com/yousef123123123",
-      stats: { likes: "140", points: "96", downloads: "2+" },
+      stats: { likes: "140", points: "96", downloads: "1K+" },
       features: ["Auto Skeleton Generation", "Custom Registry", "Caching", "Animations", "Zero Config", "No Dependencies"]
     }
   ];
