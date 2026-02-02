@@ -49,9 +49,9 @@ export default function FlutterPortfolio() {
       description: "Professional inventory management for businesses. Track stock, manage orders, and monitor inventory in real-time.",
       tech: ["Flutter", "REST API", "Charts", "Provider"],
       screenshots: [
-        "/images/remain-homecare-screenshot.png"
+        "/images/remain-screenshot.webp"
       ],
-      icon: "/images/remain_logo_launch_icon.png",
+      icon: "https://via.placeholder.com/240x240/3498db/FFFFFF?text=R",
       appstore: "https://apps.apple.com/sa/app/remain/id6670443386",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "iOS", rating: "New", reviews: "Growing" },
@@ -79,7 +79,7 @@ export default function FlutterPortfolio() {
       screenshots: [
         "/images/derma-screenshot.webp"
       ],
-      icon: "/images/icon_derma.png",
+      icon: "/images/remain_logo_launch_icon.png",
       playstore: "https://play.google.com/store/apps/details?id=com.quick.derma",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "500+", rating: "4.5", reviews: "Excellent" },
@@ -91,7 +91,7 @@ export default function FlutterPortfolio() {
       description: "Professional home care services at your doorstep. Book home visits, X-rays, nursing care, and medical consultations easily. Comprehensive healthcare solutions delivered to your home.",
       tech: ["Flutter", "Firebase", "REST API", "Bloc"],
       screenshots: [
-        "/images/remain-derma-screenshot.png"
+        "/images/remain-homecare-screenshot.png"
       ],
       icon: "/images/remain_logo_launch_icon.png",
       playstore: "https://play.google.com/store/apps/details?id=com.remain.homecare",
