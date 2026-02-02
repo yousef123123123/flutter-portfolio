@@ -86,7 +86,7 @@ export default function FlutterPortfolio() {
       features: ["Dermatologist Booking", "Skin Treatment Sessions", "Medical Records", "Real-time Notifications", "Secure Payments"]
     },
     {
-      title: "Remain",
+      title: "Remain Home Care",
       subtitle: "Home Care Services",
       description: "Professional home care services at your doorstep. Book home visits, X-rays, nursing care, and medical consultations easily. Comprehensive healthcare solutions delivered to your home.",
       tech: ["Flutter", "Firebase", "REST API", "Bloc"],
