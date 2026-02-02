@@ -51,7 +51,7 @@ export default function FlutterPortfolio() {
       screenshots: [
         "/images/remain-screenshot.webp"
       ],
-      icon: "https://via.placeholder.com/240x240/3498db/FFFFFF?text=R",
+      icon: "/images/remain_logo_launch_icon.png",
       appstore: "https://apps.apple.com/sa/app/remain/id6670443386",
       github: "https://github.com/yousef123123123",
       stats: { downloads: "iOS", rating: "New", reviews: "Growing" },
